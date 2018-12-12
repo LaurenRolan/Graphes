@@ -24,6 +24,8 @@ expr: expr '+' expr {$$=$1+$3;}
 	| expr '-' expr {$$=$1-$3;}
 	| expr '*' expr {$$=$1*$3;}
 	| expr '/' expr {$$=$1/$3;}
+	| '|' expr '|' {$$=std::abs($2);}
+	| 'e' '(' expr ')' {$$=std::abs($3);}
 	| NB
 	;
 %%
