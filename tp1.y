@@ -1,5 +1,6 @@
 %{
 	#include <iostream>
+	#include <complex>
 	int yylex(void);
 	#define YYSTYPE double
 	int yyerror(const char*);

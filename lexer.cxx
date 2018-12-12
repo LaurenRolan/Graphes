@@ -557,7 +557,7 @@ int yy_flex_debug = 1;
 
 static yyconst flex_int16_t yy_rule_linenum[10] =
     {   0,
-        8,    9,   10,   14,   18,   22,   26,   30,   31
+        9,   10,   11,   15,   19,   23,   27,   31,   32
     } ;
 
 /* The intent behind this definition is that it'll catch
@@ -571,7 +571,8 @@ char *yytext;
 #line 1 "tp1.lex"
 #line 3 "tp1.lex"
 #include <iostream>
-#line 575 "lexer.cxx"
+	#include <complex>
+#line 576 "lexer.cxx"
 
 #define INITIAL 0
 
@@ -854,9 +855,9 @@ YY_DECL
 
 	{
 /* %% [7.0] user's declarations go here */
-#line 7 "tp1.lex"
+#line 8 "tp1.lex"
 
-#line 860 "lexer.cxx"
+#line 861 "lexer.cxx"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -934,17 +935,17 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 8 "tp1.lex"
+#line 9 "tp1.lex"
 {return yytext[0];}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 9 "tp1.lex"
+#line 10 "tp1.lex"
 {}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 10 "tp1.lex"
+#line 11 "tp1.lex"
 {
 						yylval=atof(yytext);
 						return NB;
@@ -952,7 +953,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 14 "tp1.lex"
+#line 15 "tp1.lex"
 {
 						yylval=atof(yytext);
 						return NB;
@@ -960,7 +961,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 18 "tp1.lex"
+#line 19 "tp1.lex"
 {
 						yylval=atof(yytext);
 						return NB;
@@ -968,7 +969,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 22 "tp1.lex"
+#line 23 "tp1.lex"
 {
 						yylval=std::complex<double>(atof(yytext));
 						return NB;
@@ -976,7 +977,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 26 "tp1.lex"
+#line 27 "tp1.lex"
 {
 						yylval=std::complex<double>(0, atof(yytext));
 						return NB;
@@ -985,12 +986,12 @@ YY_RULE_SETUP
 case 8:
 /* rule 8 can match eol */
 YY_RULE_SETUP
-#line 30 "tp1.lex"
+#line 31 "tp1.lex"
 {return EOL;}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 31 "tp1.lex"
+#line 32 "tp1.lex"
 {
 						yylval=std::complex<double>(0, 1);
 						return NB;
@@ -998,10 +999,10 @@ YY_RULE_SETUP
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 35 "tp1.lex"
+#line 36 "tp1.lex"
 ECHO;
 	YY_BREAK
-#line 1005 "lexer.cxx"
+#line 1006 "lexer.cxx"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -2106,7 +2107,7 @@ void yyfree (void * ptr )
 
 /* %ok-for-header */
 
-#line 35 "tp1.lex"
+#line 36 "tp1.lex"
 
 
 

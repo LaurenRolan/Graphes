@@ -65,11 +65,12 @@
 #line 1 "tp1.y" /* yacc.c:339  */
 
 	#include <iostream>
+	#include <complex>
 	int yylex(void);
 	#define YYSTYPE double
 	int yyerror(const char*);
 
-#line 73 "tp1.tab.c" /* yacc.c:339  */
+#line 74 "tp1.tab.c" /* yacc.c:339  */
 
 # ifndef YY_NULLPTR
 #  if defined __cplusplus && 201103L <= __cplusplus
@@ -125,7 +126,7 @@ int yyparse (void);
 
 /* Copy the second part of user declarations.  */
 
-#line 129 "tp1.tab.c" /* yacc.c:358  */
+#line 130 "tp1.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -422,8 +423,8 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    16,    16,    18,    20,    21,    23,    24,    25,    26,
-      27,    28,    29
+       0,    17,    17,    19,    21,    22,    24,    25,    26,    27,
+      28,    29,    30
 };
 #endif
 
@@ -1204,55 +1205,55 @@ yyreduce:
   switch (yyn)
     {
         case 4:
-#line 20 "tp1.y" /* yacc.c:1646  */
+#line 21 "tp1.y" /* yacc.c:1646  */
     {std::cout << (yyvsp[-1]);}
-#line 1210 "tp1.tab.c" /* yacc.c:1646  */
+#line 1211 "tp1.tab.c" /* yacc.c:1646  */
     break;
 
   case 5:
-#line 21 "tp1.y" /* yacc.c:1646  */
+#line 22 "tp1.y" /* yacc.c:1646  */
     {}
-#line 1216 "tp1.tab.c" /* yacc.c:1646  */
+#line 1217 "tp1.tab.c" /* yacc.c:1646  */
     break;
 
   case 6:
-#line 23 "tp1.y" /* yacc.c:1646  */
+#line 24 "tp1.y" /* yacc.c:1646  */
     {(yyval)=(yyvsp[-2])+(yyvsp[0]);}
-#line 1222 "tp1.tab.c" /* yacc.c:1646  */
+#line 1223 "tp1.tab.c" /* yacc.c:1646  */
     break;
 
   case 7:
-#line 24 "tp1.y" /* yacc.c:1646  */
+#line 25 "tp1.y" /* yacc.c:1646  */
     {(yyval)=(yyvsp[-2])-(yyvsp[0]);}
-#line 1228 "tp1.tab.c" /* yacc.c:1646  */
+#line 1229 "tp1.tab.c" /* yacc.c:1646  */
     break;
 
   case 8:
-#line 25 "tp1.y" /* yacc.c:1646  */
+#line 26 "tp1.y" /* yacc.c:1646  */
     {(yyval)=(yyvsp[-2])*(yyvsp[0]);}
-#line 1234 "tp1.tab.c" /* yacc.c:1646  */
+#line 1235 "tp1.tab.c" /* yacc.c:1646  */
     break;
 
   case 9:
-#line 26 "tp1.y" /* yacc.c:1646  */
+#line 27 "tp1.y" /* yacc.c:1646  */
     {(yyval)=(yyvsp[-2])/(yyvsp[0]);}
-#line 1240 "tp1.tab.c" /* yacc.c:1646  */
+#line 1241 "tp1.tab.c" /* yacc.c:1646  */
     break;
 
   case 10:
-#line 27 "tp1.y" /* yacc.c:1646  */
+#line 28 "tp1.y" /* yacc.c:1646  */
     {(yyval)=std::abs((yyvsp[-1]));}
-#line 1246 "tp1.tab.c" /* yacc.c:1646  */
+#line 1247 "tp1.tab.c" /* yacc.c:1646  */
     break;
 
   case 11:
-#line 28 "tp1.y" /* yacc.c:1646  */
+#line 29 "tp1.y" /* yacc.c:1646  */
     {(yyval)=std::abs((yyvsp[-1]));}
-#line 1252 "tp1.tab.c" /* yacc.c:1646  */
+#line 1253 "tp1.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1256 "tp1.tab.c" /* yacc.c:1646  */
+#line 1257 "tp1.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1480,7 +1481,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 31 "tp1.y" /* yacc.c:1906  */
+#line 32 "tp1.y" /* yacc.c:1906  */
 
 #include "lexer.cxx"
 int main()
