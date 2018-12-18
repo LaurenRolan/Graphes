@@ -25,8 +25,9 @@ expr: expr '+' expr {$$=$1 + $3;}
 	| expr '-' expr {$$=$1 - $3;}
 	| expr '*' expr {$$=$1 * $3;}
 	| expr '/' expr {$$=$1 / $3;}
-	| '|' expr '|' {$$=std::abs($2);}
+	| '|' expr '|' {std::cout << "Module of " << std::abs($2);$$=std::abs($2);}
 	| 'e' '(' expr ')' {$$=std::abs($3);}
+	| '(' expr ')' {$$=$2;}
 	| NB
 	;
 %%
@@ -37,6 +38,6 @@ int main()
 }
 int yyerror( const char *s )
 {
-	fprintf( stderr, "Erreur: %s\n", s);
+	std::cout << "Erreur: " << s << std::endl;
 	return 0;
 }
