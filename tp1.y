@@ -2,7 +2,7 @@
 	#include <iostream>
 	#include <complex>
 	int yylex(void);
-	#define YYSTYPE double
+	#define YYSTYPE std::complex<double>
 	int yyerror(const char*);
 %}
 
@@ -21,10 +21,10 @@ input:
 ligne: expr EOL {std::cout << $1;}
 	| EOL {}
 	;
-expr: expr '+' expr {$$=$1+$3;}
-	| expr '-' expr {$$=$1-$3;}
-	| expr '*' expr {$$=$1*$3;}
-	| expr '/' expr {$$=$1/$3;}
+expr: expr '+' expr {$$=$1 + $3;}
+	| expr '-' expr {$$=$1 - $3;}
+	| expr '*' expr {$$=$1 * $3;}
+	| expr '/' expr {$$=$1 / $3;}
 	| '|' expr '|' {$$=std::abs($2);}
 	| 'e' '(' expr ')' {$$=std::abs($3);}
 	| NB

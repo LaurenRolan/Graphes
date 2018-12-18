@@ -1,7 +1,7 @@
 %option outfile="lexer.cxx"
 %{
 #include <iostream>
-	#include <complex>
+#include <complex>
 %}
 %option noyywrap nounput batch debug
 

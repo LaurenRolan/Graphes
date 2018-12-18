@@ -3,18 +3,21 @@ LEX      = flex
 YACC     = bison
 LEXFILE  = tp1.lex
 YACCFILE = tp1.y
-OBJ      = y.tab.o
 OUTPUT   = tp1
+OBJ      = $(OUTPUT).tab.o
 LIB      = -ll
 
 $(OUTPUT): $(OBJ)
 	$(CC) $(OBJ) -o $@ $(LIB)
 
-y.tab.o: lex.yy.c y.tab.c
-	$(CC) -c y.tab.c
+$(OUTPUT).tab.o: lex.yy.c $(OUTPUT).tab.c
+	$(CC) -c $(OUTPUT).tab.c
 
 lex.yy.c: $(LEXFILE)
 	$(LEX) $(LEXFILE)
 
-y.tab.c: $(YACCFILE)
+$(OUTPUT).tab.c: $(YACCFILE)
 	$(YACC) -d $(YACCFILE)
+
+clean:
+	rm $(OUTPUT) *.tab.*
