@@ -2,26 +2,25 @@
 %{
 #include <iostream>
 #include <complex>
+#include <unordered_map>
+#include <variant>
+#include <string>
 %}
 %option noyywrap nounput batch debug
-
-
-
+real ([0-9]*\.[0-9]+)|([0-9]+)((E|e)[-+]?[0-9]+)?
 %%
-[*/+\-()|e] 				{return yytext[0];}
+display				{ return KEYWORD; }
+[a-zA-Z_][a-zA-Z_0-9]*	{ yylval = yytext; return ID; }
+[*/+\-()|e=] 				{return yytext[0];}
 [ \t\r] 			{}
-(([0-9]*\.[0-9]+)|([0-9]+))?((E|e)[-+]?[0-9]+)? {
+{real} {
 						yylval=std::complex<double>(atof(yytext));
 						return NB;
 					}
-(([0-9]*\.[0-9]+)|([0-9]+))((E|e)[-+]?[0-9]+)?i {
+{real}?i {
 						yylval=std::complex<double>(0, atof(yytext));
 						return NB;
 					}
 				
-i 					{
-						yylval=std::complex<double>(0, 1);
-						return NB;
-					}
 \n		{return EOL;}
 %%
