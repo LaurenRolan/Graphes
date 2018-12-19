@@ -454,17 +454,17 @@ static const YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    2,    3,
         1,    1,    2,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    2,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    4,    4,    1,    4,    5,    4,    6,    6,    6,
-        6,    6,    6,    6,    6,    6,    6,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    7,    1,
+        1,    2,    1,    1,    1,    1,    1,    1,    1,    4,
+        4,    4,    5,    1,    5,    6,    4,    7,    7,    7,
+        7,    7,    7,    7,    7,    7,    7,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    8,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
 
-        8,    1,    1,    1,    9,    1,    1,    1,    1,    1,
+        9,    1,    1,    1,   10,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    4,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -481,15 +481,15 @@ static const YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static const YY_CHAR yy_meta[10] =
+static const YY_CHAR yy_meta[11] =
     {   0,
-        1,    1,    1,    1,    1,    1,    1,    1,    1
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1
     } ;
 
 static const flex_int16_t yy_base[20] =
     {   0,
-        0,    0,   24,   25,   25,   25,   25,   16,    5,   11,
-       25,   13,   15,    0,    0,   25,   10,   14,   25
+        0,    0,   25,   26,   26,   26,   26,   16,    5,   11,
+       26,   13,   15,    0,    0,   26,   10,   14,   26
     } ;
 
 static const flex_int16_t yy_def[20] =
@@ -498,20 +498,20 @@ static const flex_int16_t yy_def[20] =
        19,    9,   19,    9,   10,   19,   19,   19,    0
     } ;
 
-static const flex_int16_t yy_nxt[35] =
+static const flex_int16_t yy_nxt[37] =
     {   0,
-        4,    5,    6,    7,    8,    9,   10,   10,   11,   13,
-       14,   15,   15,   16,   17,   18,   18,   19,   12,   18,
-       12,   12,   16,   19,    3,   19,   19,   19,   19,   19,
-       19,   19,   19,   19
+        4,    5,    6,    7,    7,    8,    9,   10,   10,   11,
+       13,   14,   15,   15,   16,   17,   18,   18,   19,   12,
+       18,   12,   12,   16,   19,    3,   19,   19,   19,   19,
+       19,   19,   19,   19,   19,   19
     } ;
 
-static const flex_int16_t yy_chk[35] =
+static const flex_int16_t yy_chk[37] =
     {   0,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    9,
-        9,    9,    9,    9,   10,   17,   10,   12,   12,   18,
-       13,    8,   18,    3,   19,   19,   19,   19,   19,   19,
-       19,   19,   19,   19
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        9,    9,    9,    9,    9,   10,   17,   10,   12,   12,
+       18,   13,    8,   18,    3,   19,   19,   19,   19,   19,
+       19,   19,   19,   19,   19,   19
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -522,7 +522,7 @@ int yy_flex_debug = 1;
 
 static const flex_int16_t yy_rule_linenum[7] =
     {   0,
-        9,   10,   11,   15,   19,   20
+       11,   12,   13,   17,   21,   22
     } ;
 
 /* The intent behind this definition is that it'll catch
@@ -816,7 +816,7 @@ YY_DECL
 
 	{
 /* %% [7.0] user's declarations go here */
-#line 8 "tp1.lex"
+#line 10 "tp1.lex"
 
 #line 822 "lexer.cxx"
 
@@ -896,17 +896,17 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 9 "tp1.lex"
+#line 11 "tp1.lex"
 {return yytext[0];}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 10 "tp1.lex"
+#line 12 "tp1.lex"
 {}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 11 "tp1.lex"
+#line 13 "tp1.lex"
 {
 						yylval=std::complex<double>(atof(yytext));
 						return NB;
@@ -914,7 +914,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 15 "tp1.lex"
+#line 17 "tp1.lex"
 {
 						yylval=std::complex<double>(0, atof(yytext));
 						return NB;
@@ -923,12 +923,12 @@ YY_RULE_SETUP
 case 5:
 /* rule 5 can match eol */
 YY_RULE_SETUP
-#line 19 "tp1.lex"
+#line 21 "tp1.lex"
 {return EOL;}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 20 "tp1.lex"
+#line 22 "tp1.lex"
 {
 						yylval=std::complex<double>(0, 1);
 						return NB;
@@ -936,7 +936,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 24 "tp1.lex"
+#line 26 "tp1.lex"
 ECHO;
 	YY_BREAK
 #line 943 "lexer.cxx"
@@ -2046,6 +2046,6 @@ void yyfree (void * ptr )
 
 /* %ok-for-header */
 
-#line 24 "tp1.lex"
+#line 26 "tp1.lex"
 
 
