@@ -11,7 +11,9 @@
 %token NB
 %token EOL
 %left '+' '-'
+%left '(' ')'
 %left '*' '/'
+%left 'e'
 
 %%
 input:
@@ -26,7 +28,7 @@ expr: expr '+' expr {$$=$1 + $3;}
 	| expr '*' expr {$$=$1 * $3;}
 	| expr '/' expr {$$=$1 / $3;}
 	| '|' expr '|' {std::cout << "Module of " << std::abs($2);$$=std::abs($2);}
-	| 'e' '(' expr ')' {$$=std::abs($3);}
+	| 'e' '(' expr ')' {$$=std::exp($3);}
 	| '(' expr ')' {$$=$2;}
 	| NB
 	;
